@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.App {
+  position: relative;
+}
+
+.line-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: -1;
+}
+
+.line {
+  height: 100%;
+  width: 1px;
+  background-color: $color-white;
+  opacity: 0.03;
+}

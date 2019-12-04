@@ -1,0 +1,74 @@
+@import "../../styles//variables.scss";
+
+.button {
+  font-weight: 300;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px 3px rgba($color-black, 0.11);
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.24s ease-out;
+  line-height: 1;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--blue {
+    color: $color-white;
+    background-color: $color-blue;
+
+    &:hover {
+      background-color: $color-blue-light;
+    }
+
+    &:active {
+      background-color: $color-blue-dark;
+      transform: scale(0.98);
+    }
+
+    &:focus {
+      background-color: $color-blue-dark;
+      transform: scale(1);
+    }
+  }
+
+  &--white {
+    color: $color-white;
+    background-color: transparent;
+    outline: 1px solid $color-white;
+    outline-offset: -1px;
+
+    &:focus {
+      outline: 1px solid $color-white;
+      outline-offset: -1px;
+    }
+  }
+
+  &--md {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: 0.9rem 1.7rem;
+    letter-spacing: 0.3rem;
+
+    @media screen and(min-width: 410px) {
+      font-size: 2rem;
+      padding: 1.1rem 1.9rem;
+    }
+
+    @media screen and(min-width: 550px) {
+      font-size: 2.24rem;
+      padding: 1.24rem 2rem;
+    }
+
+    @media screen and(min-width: 650px) {
+      font-size: 2.24rem;
+      padding: 1.35rem 2.42rem;
+    }
+
+    @media screen and(min-width: 850px) {
+      font-size: 1.7rem;
+      padding: 1.24rem 1.9rem;
+    }
+  }
+}

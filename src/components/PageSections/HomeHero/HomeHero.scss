@@ -1,0 +1,254 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/animations.scss";
+
+.home-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &__content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    transform: scale(1.24);
+    animation: scale0 3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+    @media screen and(min-width: 750px) {
+      display: block;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+
+    @media screen and(min-width: 750px) {
+      text-align: left;
+    }
+
+    &__heading {
+      position: relative;
+      font-weight: 100;
+      font-size: 4.42rem;
+      letter-spacing: 0.3rem;
+      line-height: 1;
+      margin-bottom: 0.72rem;
+      margin-top: 3rem;
+
+      overflow: hidden;
+      color: transparent;
+      transform: translateY(100%);
+      animation: y0 1.72s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+      &::after {
+        content: "HARLEY SALAS";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $color-white;
+        transform: translateY(-100%);
+
+        animation: y0 1.72s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      }
+
+      @media screen and(min-width: 360px) {
+        font-size: 5.72rem;
+      }
+
+      @media screen and(min-width: 410px) {
+        font-size: 6.42rem;
+      }
+
+      @media screen and(min-width: 550px) {
+        font-size: 7.42rem;
+      }
+
+      @media screen and(min-width: 650px) {
+        font-size: 9rem;
+      }
+
+      @media screen and(min-width: 750px) {
+        font-size: 6.72rem;
+        letter-spacing: 0.42rem;
+      }
+
+      @media screen and(min-width: 850px) {
+        font-size: 5.72rem;
+        letter-spacing: 0.72rem;
+      }
+
+      @media screen and(min-width: 1100px) {
+        font-size: 6.42rem;
+      }
+
+      @media screen and(min-width: 1300px) {
+        font-size: 7.24rem;
+      }
+
+      @media screen and(min-width: 1500px) {
+        font-size: 8rem;
+      }
+
+      @media screen and(min-width: 1700px) {
+        font-size: 8.42rem;
+      }
+    }
+
+    &__subheading {
+      position: relative;
+      font-weight: 700;
+      font-size: 1.9rem;
+      letter-spacing: 0.3rem;
+      margin-bottom: 5rem;
+
+      overflow: hidden;
+      color: transparent;
+      transform: translateY(100%);
+      animation: y0 1.72s cubic-bezier(0.165, 0.84, 0.44, 1) forwards 0.42s;
+
+      &::after {
+        content: "FULLSTACK WEB DEVELOPER";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $color-white;
+        transform: translateY(-100%);
+        animation: y0 1.72s cubic-bezier(0.165, 0.84, 0.44, 1) forwards 0.42s;
+      }
+
+      @media screen and(min-width: 360px) {
+        font-size: 2.2rem;
+      }
+
+      @media screen and(min-width: 410px) {
+        font-size: 2.72rem;
+      }
+
+      @media screen and(min-width: 550px) {
+        font-size: 3.24rem;
+      }
+
+      @media screen and(min-width: 650px) {
+        font-size: 4.24rem;
+      }
+
+      @media screen and(min-width: 750px) {
+        font-size: 2.92rem;
+        letter-spacing: 0.42rem;
+      }
+
+      @media screen and(min-width: 850px) {
+        font-size: 2.42rem;
+        letter-spacing: 0.72rem;
+      }
+
+      @media screen and(min-width: 1100px) {
+        font-size: 3rem;
+      }
+
+      @media screen and(min-width: 1300px) {
+        font-size: 3.42rem;
+      }
+
+      @media screen and(min-width: 1500px) {
+        font-size: 3.72rem;
+      }
+
+      @media screen and(min-width: 1700px) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__contact {
+    margin-right: 2rem;
+
+    @media screen and(min-width: 550px) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__logo {
+    fill: none;
+    stroke: $color-blue;
+    stroke-width: 22;
+    height: 9rem;
+    opacity: 0.72;
+    z-index: -5;
+    display: block;
+    margin-left: 1rem;
+
+    stroke-dasharray: 2100;
+    stroke-dashoffset: 2100;
+
+    opacity: 0;
+    animation: offset0opacity72 3.72s cubic-bezier(0.86, 0, 0.07, 1) forwards 0s;
+
+    @media screen and(min-width: 360px) {
+      height: 10rem;
+    }
+
+    @media screen and(min-width: 410px) {
+      height: 11rem;
+    }
+
+    @media screen and(min-width: 550px) {
+      height: 15rem;
+    }
+
+    @media screen and(min-width: 650px) {
+      height: 17rem;
+    }
+
+    @media screen and(min-width: 750px) {
+      position: absolute;
+      left: calc(50% + 24rem);
+      top: 50%;
+      height: 35rem;
+      stroke-width: 19;
+      transform: translate(-50%, -50%);
+    }
+
+    @media screen and(min-width: 850px) {
+      height: 33rem;
+      left: calc(50% + 27rem);
+      stroke-width: 18;
+    }
+
+    @media screen and(min-width: 1200px) {
+      height: 35rem;
+      stroke-width: 16;
+      left: calc(50% + 29rem);
+    }
+
+    @media screen and(min-width: 1500px) {
+      height: 37rem;
+      stroke-width: 14;
+      left: calc(50% + 31rem);
+    }
+
+    @media screen and(min-width: 1700px) {
+      height: 40rem;
+    }
+
+    @media screen and(min-width: 1800px) {
+      left: calc(50% + 33rem);
+      height: 42rem;
+    }
+  }
+
+  &__button {
+    opacity: 0;
+
+    animation: fadeUp 1.24s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+    &:nth-of-type(1) {
+      animation-delay: 0.72s;
+    }
+
+    &:nth-of-type(2) {
+      animation-delay: 1s;
+    }
+  }
+}
