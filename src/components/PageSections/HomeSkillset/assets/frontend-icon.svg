@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <title>frontend-icon</title>
+  <g>
+    <rect class="a" x="11" y="20.4115" width="278" height="220.0833" rx="19.871"/>
+    <line class="a" x1="11.4826" y1="202.3663" x2="289" y2="202.3663"/>
+    <circle class="a" cx="150" cy="221.6719" r="7.7222"/>
+    <line class="a" x1="93.5313" y1="279.5885" x2="206.4688" y2="279.5885"/>
+    <g>
+      <line class="a" x1="116.195" y1="240.4948" x2="116.195" y2="279.5885"/>
+      <line class="a" x1="183.805" y1="240.4948" x2="183.805" y2="279.5885"/>
+    </g>
+  </g>
+</svg>

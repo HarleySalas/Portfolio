@@ -1,0 +1,131 @@
+@import "../../../styles/variables.scss";
+
+.home-skillset {
+  min-height: 100vh;
+  padding: 10rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0 2rem;
+  }
+
+  &__title-line {
+    width: 7rem;
+    height: 0.24rem;
+    background-color: $color-blue;
+    opacity: 0.72;
+
+    @media screen and(min-width: 500px) {
+      width: 10rem;
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 27rem;
+    height: 35rem;
+    margin: 3rem 0;
+    background-color: $color-black-light;
+
+    @media screen and(min-width: 410px) {
+      width: 34rem;
+      height: 40rem;
+    }
+
+    @media screen and(min-width: 650px) {
+      margin: 3rem;
+    }
+
+    @media screen and(min-width: 850px) {
+      width: 28rem;
+      height: 35rem;
+      margin: 2rem;
+    }
+  }
+
+  &__card-top {
+    position: relative;
+    height: 40%;
+    width: 100%;
+    background-color: rgba($color-blue, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card-icon {
+    fill: none;
+    stroke: $color-white;
+    stroke-width: 3;
+    height: 60%;
+  }
+
+  &__card-title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-transform: uppercase;
+    letter-spacing: 0.24rem;
+    text-align: center;
+    color: $color-blue;
+    background-color: $color-white;
+    padding: 0.42rem 0.72rem;
+    width: 15rem;
+  }
+
+  &__card-bottom {
+    position: relative;
+    padding: 2.42rem 2rem 2rem 2rem;
+    height: 60%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__skill {
+      background-color: rgba($color-black, 0.72);
+      padding: 0.24rem 0.72rem;
+      margin: 0.42rem;
+
+      @media screen and(min-width: 410px) {
+        font-size: 2rem;
+      }
+
+      @media screen and(min-width: 850px) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__comment {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    color: rgba($color-white, 1);
+  }
+}
