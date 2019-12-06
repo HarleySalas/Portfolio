@@ -24,6 +24,19 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $color-white;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $color-black-light;
+}
+
 .App {
   width: 100%;
   overflow-x: hidden;

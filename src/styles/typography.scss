@@ -9,6 +9,12 @@ body {
   color: $color-white;
 }
 
+* {
+  &::selection {
+    background: $color-blue;
+  }
+}
+
 p {
   font-weight: 300;
   text-indent: 2rem;
@@ -24,6 +30,12 @@ p {
   }
 }
 
+div {
+  &::selection {
+    background: $color-blue;
+  }
+}
+
 h1 {
   &::selection {
     background: $color-blue;
@@ -34,6 +46,12 @@ h2 {
   font-size: 2.72rem;
   font-weight: 500;
   letter-spacing: 0.33rem;
+  &::selection {
+    background: $color-blue;
+  }
+}
+
+h3 {
   &::selection {
     background: $color-blue;
   }

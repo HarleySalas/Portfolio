@@ -89,6 +89,10 @@
     background-color: $color-white;
     padding: 0.42rem 0.72rem;
     width: 15rem;
+
+    &::selection {
+      color: $color-white;
+    }
   }
 
   &__card-bottom {
