@@ -1,6 +1,11 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "./HomePortfolio.scss"
+
+import LinkIcon from "./assets/link.svg"
+import GithubIcon from "./assets/github.svg"
+
+import HomePortfolioDetail from "./HomePortfolioDetail"
 
 const HomePortfolio = () => {
   const data = useStaticQuery(graphql`
@@ -11,6 +16,7 @@ const HomePortfolio = () => {
         nodes {
           frontmatter {
             description
+            livesite_bool
             livesite
             title
             thumbnail
@@ -47,7 +53,6 @@ const HomePortfolio = () => {
             {/* TECH STACK */}
             <div className="home-portfolio__item__tech-wrapper">
               <h4 className="home-portfolio__item__tech-title">Tech stack:</h4>
-              {console.log(item.frontmatter.tech_stack)}
               {item.frontmatter.tech_stack.map((tech, index) => (
                 <span className="home-portfolio__item__tech" key={index}>
                   {tech}
@@ -55,6 +60,31 @@ const HomePortfolio = () => {
               ))}
             </div>
             {/* LINKS */}
+            <div className="home-portfolio__item__link-wrapper">
+              {item.frontmatter.livesite_bool ? (
+                <button className="home-portfolio__item__link-button home-portfolio__item__link-button--active">
+                  <LinkIcon className="home-portfolio__item__link-icon" />
+                  Live Site
+                </button>
+              ) : (
+                <button className="home-portfolio__item__link-button home-portfolio__item__link-button--disabled">
+                  <LinkIcon className="home-portfolio__item__link-icon" />
+                  Private
+                </button>
+              )}
+              {item.frontmatter.repo_bool ? (
+                <button className="home-portfolio__item__link-button home-portfolio__item__link-button--active">
+                  <GithubIcon className="home-portfolio__item__link-icon" />
+                  Github
+                </button>
+              ) : (
+                <button className="home-portfolio__item__link-button home-portfolio__item__link-button--disabled">
+                  <GithubIcon className="home-portfolio__item__link-icon" />
+                  Private
+                </button>
+              )}
+            </div>
+            <HomePortfolioDetail item={item} />
           </div>
         ))}
       </div>
