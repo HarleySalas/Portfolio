@@ -3,6 +3,7 @@ layout: portfolio-item
 title: Peerless Instrument
 date: 2019-12-06T13:41:34.624Z
 thumbnail: /img/peerless-mockup.jpg
+livesite-bool: true
 livesite: 'https://peerless-test.netlify.com/'
 tech-stack:
   - React
