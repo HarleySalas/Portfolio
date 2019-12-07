@@ -1,6 +1,6 @@
 ---
 layout: portfolio-item
-title: DVIMS Inventory Management
+title: DVIMS
 date: 2019-12-07T12:45:39.485Z
 thumbnail: /img/dvims-mockup.jpg
 livesite-bool: false
