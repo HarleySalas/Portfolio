@@ -1,0 +1,72 @@
+@import "../../../styles/variables.scss";
+
+.home-portfolio {
+  min-height: 100vh;
+  padding: 10rem 0;
+
+  &__container {
+  }
+
+  &__title-wrapper {
+    margin-bottom: 7rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+    &__line {
+      width: 11rem;
+      height: 0.24rem;
+      background-color: $color-blue;
+      opacity: 0.72;
+
+      @media screen and(min-width: 550px) {
+        width: 18rem;
+      }
+
+      @media screen and(min-width: 850px) {
+        width: 22rem;
+        height: 0.18rem;
+      }
+
+      @media screen and(min-width: 1400px) {
+        width: 27rem;
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    background-color: rgba($color-white, 0.01);
+    padding: 2rem;
+
+    &__img {
+      width: 100%;
+    }
+
+    &__title {
+      margin: 2rem 0;
+    }
+
+    &__tech-wrapper {
+      margin-bottom: 1rem;
+    }
+
+    &__tech-title {
+      margin-bottom: 0.42rem;
+    }
+
+    &__tech {
+      background-color: rgba($color-black, 0.72);
+      margin: 0.42rem;
+      padding: 0.24rem 0.72rem;
+
+      &:nth-of-type(1) {
+        margin: 0.42rem 0.42rem 0.42rem 0;
+      }
+    }
+  }
+}
