@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-portal`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

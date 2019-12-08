@@ -1,0 +1,227 @@
+@import "../../../../styles/variables.scss";
+
+.home-portfolio__item__view {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+
+  &__background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 2;
+  }
+
+  &__background-column {
+    height: 100%;
+    background-color: $color-black;
+    transform: translateY(-100%);
+
+    &:nth-of-type(even) {
+      animation: columnDown 1.24s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    &:nth-of-type(odd) {
+      animation: columnUp 1.24s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    &--closing {
+      &:nth-of-type(even) {
+        animation: columnDown 1.24s cubic-bezier(0.165, 0.84, 0.44, 1) reverse;
+      }
+
+      &:nth-of-type(odd) {
+        animation: columnUp 1.24s cubic-bezier(0.165, 0.84, 0.44, 1) reverse;
+      }
+    }
+
+    // HERERERERERE
+
+    &--lg {
+      width: 20%;
+    }
+
+    &--sm {
+      width: 10%;
+    }
+  }
+
+  &__line-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 3;
+  }
+
+  &__line {
+    height: 100%;
+    width: 1px;
+    background-color: $color-white;
+    opacity: 0.04;
+    transform: translateY(-100%);
+
+    &:nth-of-type(even) {
+      animation: columnDown 1.24s cubic-bezier(0.165, 0.84, 0.44, 1) forwards
+        0.42s;
+    }
+
+    &:nth-of-type(odd) {
+      animation: columnUp 1.24s cubic-bezier(0.165, 0.84, 0.44, 1) forwards
+        0.42s;
+    }
+
+    &--close {
+      &:nth-of-type(even) {
+        animation: columnDown 0.72s cubic-bezier(0.165, 0.84, 0.44, 1) reverse
+          0.42s;
+      }
+
+      &:nth-of-type(odd) {
+        animation: columnUp 0.72s cubic-bezier(0.165, 0.84, 0.44, 1) reverse
+          0.42s;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 4;
+
+    &::-webkit-scrollbar {
+      width: 1px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-white;
+      border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $color-black-light;
+    }
+
+    @media screen and(min-width: 850px) {
+      overflow-y: hidden;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 3rem;
+  }
+
+  &__fade {
+    transition: opacity 0.72s ease;
+    opacity: 0;
+  }
+
+  &__container {
+    position: relative;
+    padding-top: 7rem;
+
+    @media screen and(min-width: 850px) {
+      padding-top: 10rem;
+    }
+
+    &__wrapper {
+      opacity: 0;
+      animation: contentUp 1.72s cubic-bezier(0.165, 0.84, 0.44, 1) forwards
+        0.72s;
+
+      @media screen and(min-width: 850px) {
+        display: flex;
+      }
+
+      &--close {
+        animation: contentUp 0.42s cubic-bezier(0.165, 0.84, 0.44, 1) reverse;
+      }
+    }
+
+    &__details {
+      width: 100%;
+
+      @media screen and(min-width: 850px) {
+        width: 40%;
+      }
+    }
+
+    &__content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @media screen and(min-width: 850px) {
+        width: 60%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        justify-content: flex-end;
+        height: calc(100vh - 15rem);
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $color-white;
+          border-radius: 20px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: $color-black-light;
+        }
+      }
+
+      @media screen and(min-width:1000px) {
+        padding-left: 5rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  &__body {
+    &__details {
+      @media screen and(min-width: 750px) {
+        margin-top: 3rem;
+      }
+    }
+    &__hr {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      background-color: $color-blue;
+      width: 100%;
+      height: 1px;
+    }
+    &__html {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__cta {
+    margin-bottom: 5rem;
+
+    @media screen and(min-width: 850px) {
+      align-self: flex-end;
+    }
+  }
+}
