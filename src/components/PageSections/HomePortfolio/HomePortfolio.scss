@@ -47,7 +47,8 @@
   &__item {
     position: relative;
     width: 100%;
-    background-color: rgba($color-white, 0.01);
+    // background-color: rgba($color-white, 0.01);
+    background-color: rgba($color-black-light, 1);
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -124,6 +125,11 @@
       padding: 0.42rem 0.72rem;
       border: none;
       cursor: pointer;
+      font-weight: 200;
+      transition: all 0.24s ease-out;
+      border-radius: 2px;
+      box-shadow: 0px 0px 5px 3px rgba($color-black, 0.11);
+      letter-spacing: 0.11rem;
 
       &:focus {
         outline: none;
@@ -136,11 +142,19 @@
       &--active {
         background-color: $color-blue;
         color: $color-white;
+
+        &:hover {
+          background-color: $color-blue-light;
+        }
       }
 
       &--disabled {
         background-color: rgba($color-white, 0.07);
         color: rgba($color-white, 0.42);
+
+        &:hover {
+          background-color: rgba($color-white, 0.04);
+        }
       }
     }
 
