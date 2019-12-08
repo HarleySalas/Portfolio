@@ -33,7 +33,6 @@ const HomePortfolio = () => {
   `);
 
   const portfolio = data.allMarkdownRemark.nodes;
-  console.log(portfolio);
 
   return (
     <section className="home-portfolio">
