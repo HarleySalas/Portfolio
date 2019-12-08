@@ -13,6 +13,7 @@ const HomePortfolio = () => {
     query PortfolioQuery {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/(portfolio)/" } }
+        sort: { fields: frontmatter___order, order: ASC }
       ) {
         nodes {
           frontmatter {
