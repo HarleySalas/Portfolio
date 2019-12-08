@@ -7,6 +7,10 @@ body {
   letter-spacing: 0.07rem;
   line-height: 1.4;
   color: $color-white;
+
+  @media screen and(min-width: 850px) {
+    font-size: 1.7rem;
+  }
 }
 
 * {
