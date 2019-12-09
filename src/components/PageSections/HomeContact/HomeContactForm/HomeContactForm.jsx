@@ -43,10 +43,12 @@ const HomeContactForm = () => {
       .post("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...body }),
+        body: encode({ "form-name": "contact", ...values }),
       })
       .then(() => alert("Success!"))
       .catch(err => alert(err));
+
+    console.log(encode({ "form-name": "contact", ...values }));
 
     console.log("Message Body: ", body);
   }
@@ -58,7 +60,10 @@ const HomeContactForm = () => {
         onSubmit={handleSubmit}
         className="home-contact__form"
         name="contact"
-        netlify
+        method="post"
+        action="/contact"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
         {/* Required for netlify to detect form */}
         <input type="hidden" name="contact" value="contact" />
