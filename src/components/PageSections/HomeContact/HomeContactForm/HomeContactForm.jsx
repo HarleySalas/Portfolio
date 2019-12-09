@@ -56,7 +56,7 @@ const HomeContactForm = () => {
         ...values,
       }),
     })
-      .then(() => alert("Success!"))
+      .then(res => console.log(`Response: ${res}`))
       .catch(error => alert(error));
 
     console.log(encode({ "form-name": "contact", ...values }));
@@ -77,7 +77,7 @@ const HomeContactForm = () => {
         data-netlify-honeypot="bot-field"
       >
         {/* Required for netlify to detect form */}
-        <input type="hidden" name="contact" value="contact" />
+        <input type="hidden" name="form-name" value="contact" />
         {/* NAME AND COMPANY ROW */}
         <div className="home-contact__form__row">
           <div className="home-contact__form__input-container home-contact__form__input-container--half">
