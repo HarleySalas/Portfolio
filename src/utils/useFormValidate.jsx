@@ -37,6 +37,7 @@ function useFormValidate(initialState, validate, callback) {
   };
 
   const handleSubmit = event => {
+    console.log("Event: ", event);
     event.preventDefault();
     const validationErrors = validate(values);
     setErrors(validationErrors);
