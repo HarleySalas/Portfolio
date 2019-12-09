@@ -71,8 +71,8 @@ const HomeContactForm = () => {
         onSubmit={handleSubmit}
         className="home-contact__form"
         name="contact"
-        method="post"
-        action="/contact"
+        // method="post"
+        // action="/contact"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
