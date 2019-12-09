@@ -33,20 +33,20 @@ const HomeContactForm = () => {
 
   function sendMessage() {
     const axiosOptions = {
-      url: '/',
-      method: 'post',
+      url: "/",
+      method: "post",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       data: encode({
         "form-name": "contact",
-        ...values
-      })
-    }
+        ...values,
+      }),
+    };
 
     axios(axiosOptions)
       .then(res => {
-        console.log('Success, res: ', res)
+        console.log("Success, res: ", res);
       })
-      .catch(err => console.log('ERROR: ', err)
+      .catch(err => console.log(err));
     // axios
     //   .post("/", {
     //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
