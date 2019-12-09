@@ -46,7 +46,7 @@ const HomeContactForm = () => {
       .then(res => {
         console.log('Success, res: ', res)
       })
-      .catch(err) => console.log('ERROR: ', err)
+      .catch(err => console.log('ERROR: ', err)
     // axios
     //   .post("/", {
     //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
