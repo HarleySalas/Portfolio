@@ -32,21 +32,32 @@ const HomeContactForm = () => {
   } = useFormValidate(INITIAL_STATE, ValidateContact, sendMessage);
 
   function sendMessage() {
-    const body = {
-      name: `${values.name}`,
-      mail: `${values.mail}`,
-      company: `${values.company}`,
-      message: `${values.message}`,
-    };
+    // const body = {
+    //   name: `${values.name}`,
+    //   mail: `${values.mail}`,
+    //   company: `${values.company}`,
+    //   message: `${values.message}`,
+    // };
 
-    axios
-      .post("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...values }),
-      })
+    // axios
+    //   .post("/", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //     body: encode({ "form-name": "contact", ...values }),
+    //   })
+    //   .then(() => alert("Success!"))
+    //   .catch(err => alert(err));
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contact",
+        ...values,
+      }),
+    })
       .then(() => alert("Success!"))
-      .catch(err => alert(err));
+      .catch(error => alert(error));
 
     console.log(encode({ "form-name": "contact", ...values }));
 
