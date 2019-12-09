@@ -1,0 +1,144 @@
+@import "../../../../styles/variables.scss";
+
+.home-contact__form {
+  width: 100%;
+
+  //Outer wrapper, outside form
+  &-wrapper {
+    background-color: $color-black-light;
+    padding: 3rem;
+  }
+
+  &__cta {
+    margin-bottom: 3rem;
+  }
+
+  &__row {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    &--textarea {
+      display: block;
+      position: relative;
+      height: 17rem;
+      padding-top: 2.8rem;
+    }
+  }
+
+  &__input-container {
+    position: relative;
+    width: 100%;
+
+    &--half {
+      width: 47%;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.42s ease;
+    pointer-events: none;
+
+    &--active {
+      transform: translateY(-3rem);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $color-white;
+    color: $color-white;
+    font-weight: 300;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .home-contact__form__label {
+      transform: translateY(-3rem);
+    }
+  }
+
+  &__textarea {
+    display: block;
+    height: 3rem;
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $color-white;
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 300;
+    transition: all 0.42s ease;
+    @media screen and(min-width: 850px) {
+      height: 3.2rem;
+    }
+
+    &:focus {
+      outline: none;
+      height: 11rem;
+    }
+
+    &:focus ~ .home-contact__form__label {
+      transform: translateY(-3rem);
+    }
+
+    &:focus ~ .home-contact__form__error {
+      transform: translateY(11.72rem);
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      position: relative;
+      background-color: $color-white;
+      border-radius: 20px;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $color-black-light;
+    }
+
+    &--active {
+      height: 11rem;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgba($color-white, 0.42);
+    transform: translateY(3.5rem);
+    transition: all 0.42s ease;
+
+    @media screen and(min-width: 850px) {
+      transform: translateY(3.6rem);
+    }
+
+    &--active {
+      transform: translateY(11.72rem);
+    }
+  }
+
+  &__submit {
+    margin-top: 2rem;
+  }
+}
