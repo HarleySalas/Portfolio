@@ -58,6 +58,7 @@ const HomeContactForm = () => {
         onSubmit={handleSubmit}
         className="home-contact__form"
         name="contact"
+        netlify
       >
         {/* Required for netlify to detect form */}
         <input type="hidden" name="contact" value="contact" />
