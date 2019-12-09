@@ -54,7 +54,13 @@ const HomeContactForm = () => {
   return (
     <div className="home-contact__form-wrapper">
       <h3 className="home-contact__form__cta">Let's talk!</h3>
-      <form onSubmit={handleSubmit} className="home-contact__form">
+      <form
+        onSubmit={handleSubmit}
+        className="home-contact__form"
+        name="contact"
+      >
+        {/* Required for netlify to detect form */}
+        <input type="hidden" name="contact" value="contact" />
         {/* NAME AND COMPANY ROW */}
         <div className="home-contact__form__row">
           <div className="home-contact__form__input-container home-contact__form__input-container--half">
