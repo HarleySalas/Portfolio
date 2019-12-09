@@ -42,7 +42,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    transition: all 0.42s ease;
+    transition: all 0.42s cubic-bezier(0.165, 0.84, 0.44, 1);
     pointer-events: none;
 
     &--active {
@@ -81,7 +81,7 @@
     color: $color-white;
     font-size: 2rem;
     font-weight: 300;
-    transition: all 0.42s ease;
+    transition: all 0.42s cubic-bezier(0.165, 0.84, 0.44, 1);
     @media screen and(min-width: 850px) {
       height: 3.2rem;
     }
@@ -127,7 +127,7 @@
     top: 0;
     color: rgba($color-white, 0.42);
     transform: translateY(3.5rem);
-    transition: all 0.42s ease;
+    transition: all 0.42s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     @media screen and(min-width: 850px) {
       transform: translateY(3.6rem);
@@ -138,7 +138,45 @@
     }
   }
 
+  &__response-wrapper {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__response {
+    opacity: 0;
+    animation: showResponse 0.42s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+    &--success {
+    }
+
+    &--failure {
+      color: rgb(185, 0, 0);
+    }
+  }
+
+  &__success {
+    pointer-events: none;
+  }
+
+  &__failure {
+    pointer-events: none;
+  }
+
   &__submit {
     margin-top: 2rem;
+  }
+}
+
+@keyframes showResponse {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import "./HomeContactForm.scss";
@@ -21,14 +21,14 @@ const encode = data => {
 };
 
 const HomeContactForm = () => {
+  const [sent, setSent] = useState(false);
+  const [sendFailure, setSendFailure] = useState(false);
   const {
     handleChange,
     handleBlur,
     handleSubmit,
     values,
     errors,
-    isSubmitting,
-    posted,
   } = useFormValidate(INITIAL_STATE, ValidateContact, sendMessage);
 
   function sendMessage() {
@@ -45,26 +45,13 @@ const HomeContactForm = () => {
     axios(axiosOptions)
       .then(res => {
         console.log("Success, res: ", res);
+        setSent(true);
+        setSendFailure(false);
       })
-      .catch(err => console.log(err));
-    // axios
-    //   .post("/", {
-    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //     body: encode({ "form-name": "contact", ...values }),
-    //   })
-    //   .then(() => console.log("Success!"))
-    //   .catch(err => alert(err));
-
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: encode({
-    //     "form-name": "contact",
-    //     ...values,
-    //   }),
-    // })
-    //   .then(res => console.log(`Response: ${res}`))
-    //   .catch(error => alert(error));
+      .catch(err => {
+        setSendFailure(true);
+        setSent(false);
+      });
   }
 
   return (
@@ -183,6 +170,18 @@ const HomeContactForm = () => {
               </span>
             )}
           </div>
+        </div>
+        <div className="home-contact__form__response-wrapper">
+          {sent && (
+            <span className="home-contact__form__response home-contact__form__response--success">
+              Thanks! I'll get back to you soon.
+            </span>
+          )}
+          {sendFailure && (
+            <span className="home-contact__form__response home-contact__form__response--failure">
+              Error, please try again.
+            </span>
+          )}
         </div>
         <Button
           btnText="Send Message"
