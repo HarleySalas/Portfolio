@@ -1,13 +1,13 @@
-import React from "react"
-import "./HomeAbout.scss"
+import React from "react";
+import "./HomeAbout.scss";
 
-import aboutImg from "./assets/about-pic.jpg"
+import aboutImg from "./assets/about-pic.jpg";
 
-import Button from "../../../components/Button/Button"
+import Button from "../../../components/Button/Button";
 
 const HomeAbout = () => {
   return (
-    <section className="home-about">
+    <section id="about" className="home-about">
       <div className="container home-about__container">
         <div className="home-about__mobile-title-wrapper">
           <h2 className="home-about__title">About</h2>
@@ -45,7 +45,7 @@ const HomeAbout = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HomeAbout
+export default HomeAbout;

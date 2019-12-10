@@ -1,14 +1,14 @@
-import React from "react"
-import "./HomeHero.scss"
+import React from "react";
+import "./HomeHero.scss";
 
-import Button from "../../Button/Button"
+import Button from "../../Button/Button";
 
-import Shape from "./assets/shape.svg"
-import Logo from "./assets/hs-outline.svg"
+import Shape from "./assets/shape.svg";
+import Logo from "./assets/hs-outline.svg";
 
 const HomeHero = () => {
   return (
-    <div className="home-hero">
+    <div id="welcome" className="home-hero">
       {/* <Shape className="home-hero__shape" /> */}
       <div className="container home-hero__content-wrapper">
         <Logo className="home-hero__logo" />
@@ -34,7 +34,7 @@ const HomeHero = () => {
         {/* </div> */}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomeHero
+export default HomeHero;

@@ -35,7 +35,7 @@ const HomePortfolio = () => {
   const portfolio = data.allMarkdownRemark.nodes;
 
   return (
-    <section className="home-portfolio">
+    <section id="portfolio" className="home-portfolio">
       <div className="container home-portfolio__container">
         <div className="home-portfolio__title-wrapper">
           <h2 className="home-portfolio__title">Portfolio</h2>

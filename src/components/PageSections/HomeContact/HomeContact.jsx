@@ -9,7 +9,7 @@ import HomeContactForm from "./HomeContactForm/HomeContactForm";
 
 const HomeContact = () => {
   return (
-    <section className="home-contact">
+    <section id="contact" className="home-contact">
       <div className="container home-contact__container">
         <div className="home-contact__container__left">
           <div className="home-contact__title-wrapper">

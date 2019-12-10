@@ -1,13 +1,13 @@
-import React from "react"
-import "./HomeSkillset.scss"
+import React from "react";
+import "./HomeSkillset.scss";
 
-import FrontendIcon from "./assets/frontend-icon.svg"
-import BackendIcon from "./assets/backend-icon.svg"
-import MiscIcon from "./assets/more-icon.svg"
+import FrontendIcon from "./assets/frontend-icon.svg";
+import BackendIcon from "./assets/backend-icon.svg";
+import MiscIcon from "./assets/more-icon.svg";
 
 const HomeSkillset = () => {
   return (
-    <section className="home-skillset">
+    <section id="skillset" className="home-skillset">
       <div className="container home-skillset__container">
         <div className="home-skillset__title-wrapper">
           <div className="home-skillset__title-line"></div>
@@ -81,7 +81,7 @@ const HomeSkillset = () => {
         </p>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HomeSkillset
+export default HomeSkillset;
