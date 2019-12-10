@@ -1,0 +1,53 @@
+@import "../../../../styles/variables.scss";
+
+.navbar__mobile {
+  &__button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.active {
+      transition: all 0.24s ease-in-out;
+      transition-delay: 0.48s;
+      transform: rotate(45deg);
+
+      .navbar__mobile__button__line {
+        &:nth-child(2) {
+          width: 0px;
+        }
+
+        &:nth-child(1),
+        &:nth-child(3) {
+          transition-delay: 0.24s;
+        }
+
+        &:nth-child(1) {
+          transform: translateY(13px);
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-8px) rotate(90deg);
+        }
+      }
+    }
+
+    &__line {
+      width: 3.5rem;
+      height: 2px;
+      background-color: $color-white;
+      display: block;
+      margin: 4px auto;
+      transition: all 0.24s ease-in-out;
+      border-radius: 3px;
+    }
+  }
+}
