@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import { Portal } from "../../../../utils";
 import Button from "../../../Button/Button";
@@ -10,9 +10,10 @@ import "./HomePortfolioItemView.scss";
 
 const HomePortfolioItemView = ({ item, toggle }) => {
   const [closing, setClosing] = useState(false);
+  const scrollContainer = useRef(null);
 
   useEffect(() => {
-    disableBodyScroll();
+    disableBodyScroll(scrollContainer);
 
     return () => clearAllBodyScrollLocks();
   }, []);
@@ -27,7 +28,7 @@ const HomePortfolioItemView = ({ item, toggle }) => {
 
   return (
     <Portal>
-      <section className="home-portfolio__item__view">
+      <section className="home-portfolio__item__view" ref={scrollContainer}>
         <div className="home-portfolio__item__view__background-wrapper">
           <div
             className={`home-portfolio__item__view__background-column home-portfolio__item__view__background-column--sm ${closing &&
