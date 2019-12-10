@@ -28,7 +28,7 @@ const HomePortfolioItemView = ({ item, toggle }) => {
 
   return (
     <Portal>
-      <section className="home-portfolio__item__view" ref={scrollContainer}>
+      <section className="home-portfolio__item__view">
         <div className="home-portfolio__item__view__background-wrapper">
           <div
             className={`home-portfolio__item__view__background-column home-portfolio__item__view__background-column--sm ${closing &&
@@ -77,7 +77,10 @@ const HomePortfolioItemView = ({ item, toggle }) => {
               "home-portfolio__item__view__line--close"}`}
           ></div>
         </div>
-        <div className="home-portfolio__item__view__content">
+        <div
+          className="home-portfolio__item__view__content"
+          ref={scrollContainer}
+        >
           <div className="container home-portfolio__item__view__container">
             <div className="home-portfolio__item__view__close">
               <CloseButton
