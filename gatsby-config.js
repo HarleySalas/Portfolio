@@ -12,6 +12,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-portal`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -50,4 +51,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
