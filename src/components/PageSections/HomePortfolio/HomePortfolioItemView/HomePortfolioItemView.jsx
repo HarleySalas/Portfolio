@@ -13,7 +13,7 @@ const HomePortfolioItemView = ({ item, toggle }) => {
   const scrollContainer = useRef(null);
 
   useEffect(() => {
-    disableBodyScroll(scrollContainer);
+    disableBodyScroll(scrollContainer.current);
 
     return () => clearAllBodyScrollLocks();
   }, []);
