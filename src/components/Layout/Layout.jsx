@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
+import throttle from "lodash/fp/throttle";
 import "./Layout.scss";
 
 //base CSS
@@ -6,11 +7,34 @@ import "../../styles/base.scss";
 import "../../styles/layout.scss";
 import "../../styles/typography.scss";
 
+import { ScrollContext } from "../../context/ScrollContext";
+
 import SEO from "./SEO/SEO";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 
 const Layout = ({ children, title }) => {
+  //track window scroll height
+  const [, setScrollHeight] = useContext(ScrollContext);
+
+  const handleScroll = () => {
+    console.log(window.scrollY);
+    throttle(242, () => {
+      setScrollHeight(window.scrollY);
+    });
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
   return (
     <div className="App">
       <Navbar />
