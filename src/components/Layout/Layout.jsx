@@ -15,14 +15,11 @@ import Footer from "./Footer/Footer";
 
 const Layout = ({ children, title }) => {
   //track window scroll height
-  const [, setScrollHeight] = useContext(ScrollContext);
+  const [scrollHeight, setScrollHeight] = useContext(ScrollContext);
 
-  const handleScroll = () => {
-    console.log(window.scrollY);
-    throttle(242, () => {
-      setScrollHeight(window.scrollY);
-    });
-  };
+  const handleScroll = throttle(172, () => {
+    setScrollHeight(window.scrollY);
+  });
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -34,7 +31,8 @@ const Layout = ({ children, title }) => {
         window.removeEventListener("scroll", handleScroll);
       }
     };
-  }, []);
+  }, [handleScroll]);
+
   return (
     <div className="App">
       <Navbar />
