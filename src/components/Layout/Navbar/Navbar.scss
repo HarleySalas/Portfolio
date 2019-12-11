@@ -52,6 +52,12 @@
     transition: all 0.72s cubic-bezier(0.165, 0.84, 0.44, 1);
     opacity: 0;
 
+    margin-left: 2rem;
+
+    @media screen and(min-width: 650px) {
+      margin-left: 0;
+    }
+
     &--active {
       stroke-dashoffset: 0;
       opacity: 1;
