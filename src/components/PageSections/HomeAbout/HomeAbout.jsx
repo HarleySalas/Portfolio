@@ -41,6 +41,7 @@ const HomeAbout = () => {
             btnStyle="blue"
             btnSize="md"
             addClass="home-about__content__cta"
+            linkTo="#contact"
           />
         </div>
       </div>

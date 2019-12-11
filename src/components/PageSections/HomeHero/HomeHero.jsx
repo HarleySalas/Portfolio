@@ -22,6 +22,7 @@ const HomeHero = () => {
           btnStyle="blue"
           btnSize="md"
           addClass="home-hero__contact home-hero__button"
+          linkTo="#contact"
         />
         <Button
           btnText="Resume"
