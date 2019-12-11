@@ -3,13 +3,11 @@ import "./HomeHero.scss";
 
 import Button from "../../Button/Button";
 
-import Shape from "./assets/shape.svg";
 import Logo from "./assets/hs-outline.svg";
 
 const HomeHero = () => {
   return (
-    <div id="welcome" className="home-hero">
-      {/* <Shape className="home-hero__shape" /> */}
+    <section id="home" className="home-hero">
       <div className="container home-hero__content-wrapper">
         <Logo className="home-hero__logo" />
         {/* <div className="container"> */}
@@ -33,7 +31,7 @@ const HomeHero = () => {
         />
         {/* </div> */}
       </div>
-    </div>
+    </section>
   );
 };
 

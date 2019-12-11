@@ -44,11 +44,13 @@ const HomePortfolio = () => {
         {portfolio.map((item, index) => (
           <div className="home-portfolio__item" key={index}>
             <div className="home-portfolio__item__info">
-              <img
-                className="home-portfolio__item__img"
-                src={item.frontmatter.thumbnail}
-                alt={`${item.frontmatter.title} project`}
-              />
+              <div className="home-portfolio__item__img-wrapper">
+                <img
+                  className="home-portfolio__item__img"
+                  src={item.frontmatter.thumbnail}
+                  alt={`${item.frontmatter.title} project`}
+                />
+              </div>
               <h3 className="home-portfolio__item__title">
                 {item.frontmatter.title}
               </h3>

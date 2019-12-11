@@ -43,6 +43,7 @@
     height: 35rem;
     margin: 3rem 0;
     background-color: $color-black-light;
+    border-radius: 2px;
 
     @media screen and(min-width: 410px) {
       width: 34rem;
@@ -68,6 +69,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
   }
 
   &__card-icon {
@@ -112,7 +115,8 @@
     }
 
     &__skill {
-      background-color: rgba($color-black, 0.72);
+      color: $color-white;
+      background-color: rgba($color-black, 1);
       padding: 0.24rem 0.72rem;
       margin: 0.42rem;
 
