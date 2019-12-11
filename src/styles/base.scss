@@ -25,16 +25,24 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 1px;
+  width: 6px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $color-white;
+  background-color: rgba($color-white-dark, 0.24);
   border-radius: 20px;
+
+  &:hover {
+    background-color: rgba($color-white, 0.72);
+  }
 }
 
 body::-webkit-scrollbar-track {
-  background: $color-black-light;
+  background: rgba($color-white-dark, 0.07);
+
+  &:hover {
+    background: rgba($color-white-dark, 0.11);
+  }
 }
 
 .App {
