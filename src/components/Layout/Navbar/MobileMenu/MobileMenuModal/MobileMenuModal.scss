@@ -1,0 +1,87 @@
+@import "../../../../../styles/variables.scss";
+
+.navbar__mobile__modal {
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color-black, 0.72);
+    z-index: 100;
+  }
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 25rem;
+  height: 100vh;
+  background-color: $color-black-medium;
+  z-index: 1000;
+  transform: translateX(100%);
+  animation: navbarModal 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+  &__ul {
+    width: 100%;
+    height: 22rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 11rem;
+  }
+
+  &__li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__link {
+      position: relative;
+      font-size: 2.24rem;
+      letter-spacing: 0.24rem;
+      display: inline-block;
+      padding: 1rem 0;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $color-white;
+        bottom: 0;
+        left: 0;
+        border-radius: 3px;
+        transform: translateY(3px);
+        transition: all 0.11s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      &:hover {
+        &::before {
+          transform: translateY(0);
+          transition: all 0.24s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+      }
+
+      &.active {
+        &::before {
+          transform: translateY(0);
+          transition: all 0.24s cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes navbarModal {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
