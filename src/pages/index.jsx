@@ -13,7 +13,7 @@ import HomeContact from "../components/PageSections/HomeContact/HomeContact";
 const HomePage = () => {
   return (
     <ScrollProvider>
-      <Layout title="test">
+      <Layout>
         <HomeHero />
         <HomeAbout />
         <HomeSkillset />
