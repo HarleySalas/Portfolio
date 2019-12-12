@@ -32,6 +32,14 @@ const Button = props => {
     );
   }
 
+  if (props.file) {
+    return (
+      <a href={props.file} target="_blank">
+        {btnElement}
+      </a>
+    );
+  }
+
   return btnElement;
 };
 

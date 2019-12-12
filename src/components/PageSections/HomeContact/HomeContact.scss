@@ -177,6 +177,7 @@
       font-size: 1.7rem;
       overflow: hidden;
       cursor: pointer;
+      transition: all 0.24s cubic-bezier(0.165, 0.84, 0.44, 1);
 
       &:focus {
         outline: none;
@@ -191,8 +192,8 @@
         height: 100%;
         background-color: $color-white;
         z-index: -1;
-        transition: all 0.42s ease;
-        transform: translateY(100%);
+        transition: all 0.24s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform: translateY(103%);
       }
 
       &:hover {
