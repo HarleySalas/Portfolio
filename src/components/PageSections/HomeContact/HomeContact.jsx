@@ -5,6 +5,8 @@ import MailIcon from "./assets/paper-plane.svg";
 import GithubIcon from "./assets/github.svg";
 import LinkedInIcon from "./assets/linkedin.svg";
 
+import Resume from "./assets/Harley Salas - 2019 Resume.pdf";
+
 import HomeContactForm from "./HomeContactForm/HomeContactForm";
 
 const HomeContact = () => {
@@ -45,7 +47,9 @@ const HomeContact = () => {
             >
               <LinkedInIcon className="home-contact__link__icon" />
             </a>
-            <button className="home-contact__link__resume">Resume</button>
+            <a href={Resume} target="_blank">
+              <button className="home-contact__link__resume">Resume</button>
+            </a>
           </div>
           <p className="home-contact__brief">
             I'm currently seeking freelance, contract and employment
