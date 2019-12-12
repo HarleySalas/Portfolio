@@ -5,6 +5,8 @@ import Button from "../../Button/Button";
 
 import Logo from "./assets/hs-outline.svg";
 
+import Resume from "./assets/Harley Salas - 2019 Resume.pdf";
+
 const HomeHero = () => {
   return (
     <section id="home" className="home-hero">
@@ -29,6 +31,7 @@ const HomeHero = () => {
           btnStyle="white"
           btnSize="md"
           addClass="home-hero__button"
+          file={Resume}
         />
         {/* </div> */}
       </div>
