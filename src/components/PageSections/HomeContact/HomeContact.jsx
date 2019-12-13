@@ -5,7 +5,7 @@ import MailIcon from "./assets/paper-plane.svg";
 import GithubIcon from "./assets/github.svg";
 import LinkedInIcon from "./assets/linkedin.svg";
 
-import Resume from "./assets/Harley Salas - 2019 Resume.pdf";
+import Resume from "./assets/Harley-Salas-Resume.pdf";
 
 import HomeContactForm from "./HomeContactForm/HomeContactForm";
 

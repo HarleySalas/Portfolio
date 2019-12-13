@@ -5,7 +5,7 @@ import Button from "../../Button/Button";
 
 import Logo from "./assets/hs-outline.svg";
 
-import Resume from "./assets/Harley Salas - 2019 Resume.pdf";
+import Resume from "./assets/Harley-Salas-Resume.pdf";
 
 const HomeHero = () => {
   return (
